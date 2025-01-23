@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Background with Video</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .full-width-image {
+            position: relative;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            overflow: hidden;
+        }
+
+        .full-width-image img, .full-width-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the content covers the container */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out; /* Smooth fade effect */
+        }
+
+        .full-width-image img.active, .full-width-image video.active {
+            opacity: 1;
+        }
+
+        .full-width-image::before {
+            content: "RECAP";
+            position: absolute;
+            top: 45%; /* Adjusted position */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10vw; /* Larger font size for "RECAP" */
+            font-weight: bold;
+            color:#6b86b1;
+            z-index: 2;
+        }
+
+        .full-width-image::after {
+            content: "ENCAPSULATE24";
+            position: absolute;
+            top: 56%; /* Position below "RECAP" */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5vw; /* Smaller font size for "ENCAPSULATE24" */
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Shadow for contrast */
+            z-index: 2;
+        }
+        .view-more-button {
+            position: absolute;
+            top: 70%; /* Positioned below the text */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #6b86b1, #030268);
+            color: #fff;
+            font-size: 1.2vw;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 3;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="full-width-image">
+        <video src="img\IMG_0330.MOV" autoplay muted loop class="active"></video>
+        <img src="img\IMG_8672.jpg" alt="Image 1" >
+        <img src="img\IMG_7506.JPG" alt="Image 2">
+        <img src="Image_Sliding.html\IMG_8068.JPG" alt="Image 3">
+        <img src="img\IMG_8481.jpg" alt="Image 4">
+        <video src="img\IMG_9196.MOV" autoplay muted loop></video>
+        <img src="img\IMG_7805.JPG" alt="Image 5">
+        <a href="grid.html" class="view-more-button">View More</a>
+    </div>
+
+    
+    <script>
+        const elements = document.querySelectorAll('.full-width-image img, .full-width-image video');
+        let currentIndex = 0;
+
+        function changeMedia() {
+            elements[currentIndex].classList.remove('active'); // Hide current media
+            currentIndex = (currentIndex + 1) % elements.length; // Move to next media
+            elements[currentIndex].classList.add('active'); // Show next media
+        }
+
+        setInterval(changeMedia, 2500); // Change media every 2.5 seconds
+    </script>
+</body>
+</html>

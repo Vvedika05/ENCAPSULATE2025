@@ -1,0 +1,137 @@
+/*https://bytewebster.com/*/
+/*https://bytewebster.com/*/
+/*https://bytewebster.com/*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(16, 2, 72) 0%, rgba(116,182,247,1) 90% );
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 400px;
+  height: 600px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+
+.swiper-slide-active {
+  filter: blur(0px);
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-slide span {
+  text-transform: uppercase;
+  color: #fff;
+  background: #1b7402;
+  padding: 7px 18px 7px 25px;
+  display: inline-block;
+  border-radius: 0 20px 20px 0px;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.swiper-slide--one span {
+  background: #62667f;
+}
+
+.swiper-slide--two span {
+  background: #087ac4;
+}
+
+.swiper-slide--three span {
+  background: #b45205;
+}
+
+.swiper-slide--four span {
+  background: #087ac4;
+}
+
+.swiper-slide h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  padding: 25px 45px 0 25px;
+}
+
+.swiper-slide p {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  padding: 0 25px 35px 25px;
+}
+
+.swiper-slide svg {
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  margin-right: 7px;
+}
+.swiper-slide--one { background: url('img/1.png') no-repeat center/cover; }
+.swiper-slide--two { background: url('img/2.png') no-repeat center/cover; }
+.swiper-slide--three { background: url('img/3.png') no-repeat center/cover; }
+.swiper-slide--four { background: url('img/4.png') no-repeat center/cover; }
+.swiper-slide--five { background: url('img/5.png') no-repeat center/cover; }
+.swiper-slide--six { background: url('img/6.png') no-repeat center/cover; }
+.swiper-slide--seven { background: url('img/7.png') no-repeat center/cover; }
+.swiper-slide--eight { background: url('img/8.png') no-repeat center/cover; }
+.swiper-slide--nine { background: url('img/9.png') no-repeat center/cover; }
+.swiper-slide--ten { background: url('img/10.png') no-repeat center/cover; }
+.swiper-slide--eleven { background: url('img/11.png') no-repeat center/cover; }
+.swiper-slide--twelve { background: url('img/12.png') no-repeat center/cover; }
+.swiper-slide--thirteen { background: url('img/13.png') no-repeat center/cover; }
+.swiper-slide--fourteen { background: url('img/14.png') no-repeat center/cover; }
+.swiper-slide--fifteen { background: url('img/15.png') no-repeat center/cover; }
+.swiper-slide--sixteen { background: url('img/16.png') no-repeat center/cover; }
+.swiper-slide--seventeen { background: url('img/17.png') no-repeat center/cover; }
+.swiper-slide--eighteen { background: url('img/18.png') no-repeat center/cover; }
+.swiper-slide--nineteen { background: url('img/19.png') no-repeat center/cover; }
+.swiper-slide--twenty { background: url('img/20.png') no-repeat center/cover; }
+.swiper-slide--twenty-one { background: url('img/21.png') no-repeat center/cover; }
+.swiper-slide--twenty-two { background: url('img/22.png') no-repeat center/cover; }
+.swiper-slide--twenty-three { background: url('img/23.png') no-repeat center/cover; }
+.swiper-slide--twenty-four { background: url('img/24.png') no-repeat center/cover; }
+.swiper-slide--twenty-five { background: url('img/25.png') no-repeat center/cover; }
+.swiper-slide--twenty-six { background: url('img/26.png') no-repeat center/cover; }
+.swiper-slide--twenty-seven { background: url('img/27.png') no-repeat center/cover; }
+.swiper-slide--twenty-eight { background: url('img/28.png') no-repeat center/cover; }
+
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
